@@ -30,7 +30,7 @@ export default function Portfolio() {
   const [currentTime, setCurrentTime] = useState(new Date())
 
   const fullTerminalText =
-    "$ whoami\n> Aryan Nitin Maske\n$ cat skills.txt\n> Frontend Developer | React.js | TypeScript\n$ status\n> Ready for new challenges..."
+    "$ who am i\n> Aryan Nitin Maske\n$ cat skills.txt\n> Frontend Developer | React.js | TypeScript\n$ status\n> Ready for new challenges..."
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -66,9 +66,9 @@ export default function Portfolio() {
     { name: "Tailwind CSS", icon: <Brackets className="w-4 h-4" />, level: 90 },
     { name: "GitHub", icon: <Github className="w-4 h-4" />, level: 85 },
     { name: "C Programming", icon: <Binary className="w-4 h-4" />, level: 75 },
-    { name: "SQL", icon: <Database className="w-4 h-4" />, level: 70 },
-    { name: "Node.js", icon: <Globe className="w-4 h-4" />, level: 75 },
-    { name: "MongoDB", icon: <Database className="w-4 h-4" />, level: 70 },
+    { name: "SQL", icon: <Database className="w-4 h-4" />, level: 60 },
+    { name: "Node.js", icon: <Globe className="w-4 h-4" />, level: 45 },
+    { name: "MongoDB", icon: <Database className="w-4 h-4" />, level: 40 },
   ]
 
   const projects = [
@@ -77,7 +77,7 @@ export default function Portfolio() {
       description:
         "A frontend-only simulation project that showcases real-time disaster alerts using AI concepts. Built with TypeScript, React (Next.js), and Tailwind CSS.",
       tech: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
-      github: "https://github.com/aryanmaske052005/Lex-Ai--The-Research-Engine-For-Court",
+      github: "https://github.com/aryanmaske052005/DisMgmt",
       features: ["Real-time monitoring", "Interactive dashboard", "Modular TypeScript code", "Responsive UI"],
       status: "Production",
       lines: "2.5K+ LOC",
@@ -144,7 +144,7 @@ export default function Portfolio() {
       institution: "A.G. PATIL INSTITUTE OF TECHNOLOGY, SOLAPUR",
       duration: "08/2022 - 05/2026",
       status: "Pursuing",
-      grade: "Current CGPA: 8.5/10",
+      grade: "Current CGPA: 7.1/10",
       icon: <Cpu className="w-6 h-6" />,
     },
     {
@@ -152,7 +152,7 @@ export default function Portfolio() {
       institution: "D.B.F Dayanand College Of Arts And Science Solapur",
       duration: "06/2022",
       status: "Completed",
-      grade: "Percentage: 85%",
+      grade: "Percentage: 60%",
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
@@ -160,34 +160,34 @@ export default function Portfolio() {
       institution: "P.S.English Medium Technical High School Solapur",
       duration: "06/2020",
       status: "Completed",
-      grade: "Percentage: 88%",
+      grade: "Percentage: 81%",
       icon: <GraduationCap className="w-6 h-6" />,
     },
   ]
 
   const references = [
     {
-      name: "Dr. Rajesh Kumar",
-      position: "Professor, Computer Engineering",
-      institution: "A.G. PATIL INSTITUTE OF TECHNOLOGY",
-      email: "rajesh.kumar@agpit.edu.in",
-      phone: "+91 9876543210",
-      relationship: "Academic Supervisor",
-    },
-    {
-      name: "Prof. Priya Sharma",
+      name: "Dr. S. V. Kulkarni",
       position: "Head of Department, CSE",
       institution: "A.G. PATIL INSTITUTE OF TECHNOLOGY",
-      email: "priya.sharma@agpit.edu.in",
-      phone: "+91 9876543211",
+      email: "svkulkarni1203@agpit.edu.in",
+      phone: "+91 9420624370",
       relationship: "Department Head",
     },
     {
-      name: "Mr. Amit Patel",
-      position: "Senior Developer, APT TECH",
-      institution: "APT TECH Solutions",
-      email: "amit.patel@apttech.com",
-      phone: "+91 9876543212",
+      name: "Prof. Mayur Shinde",
+      position: "Assistant Professor, BCA",
+      institution: "Maharashtra Mahavidyalaya Nilanga",
+      email: "mayurwshinde@gmail.com",
+      phone: "+91 9561712894",
+      relationship: "Project Mentor",
+    },
+    {
+      name: "Mr. Santosh Khawale",
+      position: "CEO and Founder",
+      institution: "Dhenoo Tech Solutions",
+      email: "santosh.khawale@dhenoo.com",
+      phone: "+91 9823000000",
       relationship: "Internship Mentor",
     },
   ]
