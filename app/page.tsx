@@ -344,6 +344,16 @@ export default function Portfolio() {
                     Email Me
                   </a>
                 </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-gradient-to-r from-yellow-400 to-amber-600 text-black border-none hover:from-amber-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 font-mono"
+                  asChild
+                >
+                  <a href="/AryanNitinMaskeResume.pdf" download>
+                    Download Resume
+                  </a>
+                </Button>
               </motion.div>
 
               <motion.div
@@ -737,6 +747,20 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-12 sm:py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold font-mono bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent mb-6 sm:mb-8">
+              {"<Contact Me />"}
+            </h2>
+            <div className="max-w-xl mx-auto bg-gray-900/50 border-amber-500/30 backdrop-blur-lg rounded-lg p-6 sm:p-8">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-8 sm:py-12 border-t border-amber-500/20 bg-gray-900/20 backdrop-blur-lg">
         <div className="container mx-auto px-4 sm:px-6 text-center">
@@ -762,4 +786,53 @@ export default function Portfolio() {
       </footer>
     </div>
   )
+}
+
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&to=maskearyan420@gmail.com&su=${encodeURIComponent(
+      "Portfolio Contact from " + name
+    )}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
+    window.open(gmailUrl, '_blank');
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        placeholder="Your Name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+        required
+        className="w-full px-4 py-2 rounded bg-gray-800 text-amber-200 border border-amber-500/30 focus:outline-none focus:ring-2 focus:ring-amber-400"
+      />
+      <input
+        type="email"
+        placeholder="Your Email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+        required
+        className="w-full px-4 py-2 rounded bg-gray-800 text-amber-200 border border-amber-500/30 focus:outline-none focus:ring-2 focus:ring-amber-400"
+      />
+      <textarea
+        placeholder="Your Message"
+        value={message}
+        onChange={e => setMessage(e.target.value)}
+        required
+        rows={5}
+        className="w-full px-4 py-2 rounded bg-gray-800 text-amber-200 border border-amber-500/30 focus:outline-none focus:ring-2 focus:ring-amber-400"
+      />
+      <Button
+        type="submit"
+        className="w-full bg-gradient-to-r from-yellow-400 to-amber-600 text-black border-none hover:from-amber-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 font-mono"
+      >
+        Send Message
+      </Button>
+    </form>
+  );
 }
